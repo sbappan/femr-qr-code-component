@@ -1,42 +1,84 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --color-light-gray: hsl(212, 45%, 89%);
+  --color-grayish-blue: hsl(220, 15%, 55%);
+  --color-gray: hsl(220, 15%, 55%);
+  --color-dark-blue: hsl(218, 44%, 22%);
+}
+
+body {
+  background-color: var(--color-light-gray);
+
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+
+  margin: 0;
+}
+
+main {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 320px;
+  height: 497px;
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 16px;
+
+  background-color: var(--color-white);
+
+  border-radius: 20px;
+
   text-align: center;
+
+  /* Used https://www.cssmatic.com/box-shadow to convert drop shadow from Figma to CSS*/
+
+  -webkit-box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.0477), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.0477), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.0477), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.container img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-dark-blue);
+
+  margin: 0;
+  margin-top: 8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.container p {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--color-gray);
+
+  margin: 0 16px 0;
 }
 
-.card {
-  padding: 2em;
+.attribution {
+  font-size: 11px;
+  text-align: center;
+
+  position: absolute;
+  bottom: 5px;
 }
 
-.read-the-docs {
-  color: #888;
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
