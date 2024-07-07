@@ -6,13 +6,18 @@
   --color-dark-blue: hsl(218, 44%, 22%);
 }
 
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: var(--color-light-gray);
 
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
 
-  margin: 0;
+  
 }
 
 main {
